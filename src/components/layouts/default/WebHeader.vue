@@ -107,7 +107,7 @@
       </nav>
     </div>
   </header>
-  <div style="padding-top: 100px" class="lg:visible md:invisible"></div>
+  <div style="padding-top: 100px" class="hidden lg:block"></div>
   <a-modal v-model:visible="loginModal" title="Login" @ok="loginModal = false" :footer="null">
     <Login @on-login="onLogin"/>
   </a-modal>

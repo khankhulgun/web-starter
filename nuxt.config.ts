@@ -37,8 +37,8 @@ export default defineNuxtConfig({
       { name: "description", content: "khankhulgun.mn нэгдсэн платформ." },
       { name: "og:url", content: "https://khankhulgun.mn/" },
       { name: "og:type", content: "article" },
-      { name: "og:title", content: "khankhulgun.mn нэгдсэн платформ." },
-      { name: "og:description", content: "khankhulgun.mn Тнэгдсэн платформ." },
+      { name: "og:title", content: "Khan Khulgun Team" },
+      { name: "og:description", content: "Khan Khulgun Team" },
       { name: "og:image", content: "https://khankhulgun.mn/constellation.png" },
     ],
     link: [

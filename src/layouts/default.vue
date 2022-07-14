@@ -1,7 +1,7 @@
 <template>
   <div>
     <Head>
-      <Title>Нэгдсэн платформ.</Title>
+      <Title>Khan Khulgun Team</Title>
     </Head>
     <WebHeader />
 

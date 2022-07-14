@@ -1,14 +1,6 @@
 <!-- This example requires Tailwind CSS v2.0+ -->
 <template>
-  <section id="faq" aria-labelledby="faq-title" class="relative overflow-hidden bg-slate-50 py-20 sm:py-32"><img alt=""
-                                                                                                                 src="https://salient.tailwindui.com/_next/static/media/background-faqs.55d2e36a.jpg"
-                                                                                                                 width="1558"
-                                                                                                                 height="946"
-                                                                                                                 decoding="async"
-                                                                                                                 data-nimg="future"
-                                                                                                                 class="absolute top-0 left-1/2 max-w-none translate-x-[-30%] -translate-y-1/4"
-                                                                                                                 loading="lazy"
-  >
+  <section id="faq" aria-labelledby="faq-title" class="relative overflow-hidden bg-slate-50 py-20 sm:py-32">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative">
       <div class="mx-auto max-w-2xl lg:mx-0"><h2 id="faq-title"
                                                  class="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl"
