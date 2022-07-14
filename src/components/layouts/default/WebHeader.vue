@@ -1,5 +1,5 @@
 <template>
-  <header class="py-10 lg:fixed lg:inset-x-0 bg-white z-10">
+  <header class="py-4 lg:fixed lg:inset-x-0 bg-white z-10">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <nav class="relative z-50 flex justify-between">
         <div class="flex items-center md:gap-x-12">
@@ -33,10 +33,10 @@
           </div>
         </div>
         <div class="flex items-center gap-x-5 md:gap-x-8">
-          <div class="hidden md:block"><a
+          <div class="hidden md:block"><button
             class="inline-block rounded-lg py-1 px-2 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900"
-            href="/login"
-          >Sign in</a></div>
+            @click="loginModal=true"
+          >Sign in</button></div>
           <a
             class="group inline-flex items-center justify-center rounded-full py-2 px-4 text-sm  focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 bg-blue-600 text-white hover:text-slate-100 hover:bg-blue-500 active:bg-blue-800 active:text-blue-100 focus-visible:outline-blue-600"
             href="/register"
@@ -99,7 +99,7 @@
 
 
                   <hr class="m-2 border-slate-300/40">
-                  <a class="block w-full p-2" href="/login">Sign in</a></div>
+                  <button class="block w-full p-2"   @click="loginModal=true">Sign in</button></div>
               </div>
             </div>
           </div>
@@ -107,12 +107,26 @@
       </nav>
     </div>
   </header>
+  <div style="padding-top: 100px" class="lg:visible md:invisible"></div>
+  <a-modal v-model:visible="loginModal" title="Login" @ok="loginModal = false" :footer="null">
+    <Login @on-login="onLogin"/>
+  </a-modal>
 </template>
 <script>
+import Login from "../../common/Login"
 export default {
+  components:{
+    Login
+  },
   data(){
     return {
-      mobileMenu:false
+      mobileMenu:false,
+      loginModal:false
+    }
+  },
+  methods:{
+    onLogin(){
+      this.loginModal = false;
     }
   },
   watch: {
@@ -122,9 +136,6 @@ export default {
         window.scrollTo(0, 0);
       }, 200 );
     }
-  },
-  methods: {
-
   }
 }
 </script>

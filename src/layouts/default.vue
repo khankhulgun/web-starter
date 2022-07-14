@@ -4,6 +4,7 @@
       <Title>Нэгдсэн платформ.</Title>
     </Head>
     <WebHeader />
+
     <NuxtPage :key="$route.fullPath" />
     <WebFooter />
   </div>

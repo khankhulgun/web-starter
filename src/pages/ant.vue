@@ -5,7 +5,7 @@
       <h3>Modal</h3>
       <a-button type="primary" @click="showModal">Open Modal</a-button>
 
-      <a-modal v-model:visible="visible" title="Basic Modal" @ok="handleOk">
+      <a-modal v-model:visible="visible" title="Basic Modal" @ok="handleOk" :footer="null">
         <p>Some contents...</p>
         <p>Some contents...</p>
         <p>Some contents...</p>
