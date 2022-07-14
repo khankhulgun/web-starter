@@ -1,31 +1,31 @@
 <template>
-  <header class="py-4 lg:fixed lg:inset-x-0 bg-white z-10 bg-white dark:bg-black">
+  <header class="py-4 lg:fixed lg:inset-x-0 bg-white z-10 bg-white dark:bg-slate-900">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <nav class="relative z-50 flex justify-between">
         <div class="flex items-center md:gap-x-12">
 
-          <a aria-label="Home" href="/" class="text-slate-700  hover:text-slate-900">
-            <img src="https://khankhulgun.mn/logo_b.png" class="mx-auto h-10 w-auto" alt="Khan Khulgun"> Khan khulgun
+          <a aria-label="Home" href="/" class="text-slate-700  hover:text-slate-900 dark:text-slate-400 hover:dark:text-slate-300">
+            <div class="mx-auto h-10 w-auto bg-logo-light dark:bg-logo-dark bg-contain bg-no-repeat bg-center" ></div> Khan khulgun
           </a>
           <div class="hidden md:flex md:gap-x-6">
 
 
             <nuxt-link
-              class="inline-block rounded-lg py-1 px-2 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900"
+              class="inline-block rounded-lg py-1 px-2 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-400 hover:dark:text-slate-900"
               to="/"
             >
               Home
             </nuxt-link>
 
             <nuxt-link
-              class="inline-block rounded-lg py-1 px-2 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900"
+              class="inline-block rounded-lg py-1 px-2 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-400 hover:dark:text-slate-900"
               to="/about"
             >
               About
             </nuxt-link>
 
             <nuxt-link
-              class="inline-block rounded-lg py-1 px-2 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900"
+              class="inline-block rounded-lg py-1 px-2 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-400 hover:dark:text-slate-900"
               to="/ant"
             >
               Ant example
@@ -35,13 +35,16 @@
         </div>
         <div class="flex items-center gap-x-5 md:gap-x-8">
           <div class="hidden md:block"><button
-            class="inline-block rounded-lg py-1 px-2 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900"
+            class="inline-block rounded-lg py-1 px-2 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-400 hover:dark:text-slate-900"
             @click="loginModal=true"
           >Sign in</button></div>
           <a
             class="group inline-flex items-center justify-center rounded-full py-2 px-4 text-sm  focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 bg-blue-600 text-white hover:text-slate-100 hover:bg-blue-500 active:bg-blue-800 active:text-blue-100 focus-visible:outline-blue-600"
             href="/register"
           ><span>Register</span></a>
+
+          <ThemeSwitcher/>
+
           <div class="-mr-1 md:hidden">
             <div>
               <button
@@ -115,27 +118,30 @@
 </template>
 <script>
 import Login from "../../common/Login"
+import ThemeSwitcher from "../../common/ThemeSwitcher"
 export default {
-  components:{
-    Login
+  components: {
+    Login,
+    ThemeSwitcher
   },
-  data(){
+  data () {
     return {
-      mobileMenu:false,
-      loginModal:false
+      mobileMenu: false,
+      loginModal: false
     }
   },
-  methods:{
-    onLogin(){
+
+  methods: {
+    onLogin () {
       this.loginModal = false;
-    }
-  },
-  watch: {
-    $route() {
-      setTimeout( () => {
-        this.mobileMenu = false;
-        window.scrollTo(0, 0);
-      }, 200 );
+    },
+    watch: {
+      $route () {
+        setTimeout(() => {
+          this.mobileMenu = false;
+          window.scrollTo(0, 0);
+        }, 200);
+      }
     }
   }
 }

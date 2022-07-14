@@ -1,20 +1,23 @@
 <template>
-  <footer class="bg-slate-50">
+  <footer class="bg-white dark:bg-slate-900">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="py-16">
-        <img src="https://khankhulgun.mn/logo_b.png" class="mx-auto h-10 w-auto" alt="Khan Khulgun">
+
+        <a aria-label="Home" href="/" class="mx-auto h-10 w-auto text-slate-700 align-c  hover:text-slate-900 dark:text-slate-400 hover:dark:text-slate-300">
+          <div class="mx-auto h-10 w-auto bg-logo-light dark:bg-logo-dark bg-contain bg-no-repeat bg-center" ></div>
+        </a>
         <nav class="mt-10 text-sm" aria-label="quick links">
           <div class="-my-1 flex justify-center gap-x-6">
 
-            <nuxt-link class="inline-block rounded-lg py-1 px-2 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900" to="/" >
+            <nuxt-link class="inline-block rounded-lg py-1 px-2 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-400 hover:dark:text-slate-900" to="/" >
               Home
             </nuxt-link>
 
-            <nuxt-link class="inline-block rounded-lg py-1 px-2 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900" to="/about" >
+            <nuxt-link class="inline-block rounded-lg py-1 px-2 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-400 hover:dark:text-slate-900" to="/about" >
               About
             </nuxt-link>
 
-            <nuxt-link class="inline-block rounded-lg py-1 px-2 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900" to="/ant" >
+            <nuxt-link class="inline-block rounded-lg py-1 px-2 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-400 hover:dark:text-slate-900" to="/ant" >
               Ant example
             </nuxt-link>
 
@@ -37,7 +40,7 @@
             ></path>
           </svg>
         </a></div>
-        <p class="mt-6 text-sm text-slate-500 sm:mt-0">Copyright © <!-- -->2022<!-- --> Khan Khulgun LLC. All rights reserved.</p>
+        <p class="mt-6 text-sm text-slate-500 sm:mt-0 dark:text-slate-400">Copyright © <!-- -->2022<!-- --> Khan Khulgun LLC. All rights reserved.</p>
       </div>
     </div>
   </footer>

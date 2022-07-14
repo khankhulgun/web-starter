@@ -12,12 +12,19 @@ module.exports = {
   ],
   theme: {
     extend: {
-
+      backgroundImage: {
+        'logo-dark':
+          "url('https://khankhulgun.mn/logo_w.png')",
+        'logo-light':
+          "url('https://khankhulgun.mn/logo_b.png')",
+      },
     },
   },
   darkMode: 'class',
   variants: {
-    extend: {},
+    extend: {
+      backgroundImage: ['dark'],
+    },
   },
   plugins: [],
 };

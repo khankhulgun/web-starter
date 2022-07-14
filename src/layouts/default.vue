@@ -1,5 +1,5 @@
 <template>
-  <div >
+  <div class="bg-white dark:bg-slate-900">
     <Head>
       <Title>Khan Khulgun Team</Title>
     </Head>
