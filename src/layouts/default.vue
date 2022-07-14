@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div >
     <Head>
       <Title>Khan Khulgun Team</Title>
     </Head>

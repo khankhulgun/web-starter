@@ -1,8 +1,9 @@
 <template>
-  <header class="py-4 lg:fixed lg:inset-x-0 bg-white z-10">
+  <header class="py-4 lg:fixed lg:inset-x-0 bg-white z-10 bg-white dark:bg-black">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <nav class="relative z-50 flex justify-between">
         <div class="flex items-center md:gap-x-12">
+
           <a aria-label="Home" href="/" class="text-slate-700  hover:text-slate-900">
             <img src="https://khankhulgun.mn/logo_b.png" class="mx-auto h-10 w-auto" alt="Khan Khulgun"> Khan khulgun
           </a>
