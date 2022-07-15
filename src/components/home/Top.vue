@@ -1,5 +1,5 @@
 <template>
-  <div class=" px-4 sm:px-6 lg:px-8 pt-20 pb-16 text-center lg:pt-32 bg-white dark:bg-slate-800">
+  <div class=" px-4 sm:px-6 lg:px-8 pt-20 pb-16 text-center lg:pt-32 bg-white dark:bg-slate-900">
     <div class="mx-auto max-w-7xl">
       <h1 class="mx-auto max-w-4xl font-display text-5xl font-medium tracking-tight text-slate-900 dark:text-slate-300 sm:text-7xl">Develop
         <!-- --> <span class="relative whitespace-nowrap text-blue-600"><svg aria-hidden="true" viewBox="0 0 418 42"

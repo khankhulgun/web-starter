@@ -12,9 +12,23 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import Antd from 'ant-design-vue';
-import 'ant-design-vue/dist/antd.css';
+// import 'ant-design-vue/dist/antd.css';
+import { generate, presetDarkPalettes } from '@ant-design/colors';
 
-
+// Generate dark color palettes by a given color
+// const colors = generate('#1890ff', {
+//   theme: 'dark',
+//   backgroundColor: '#0f172a'
+// });
+// console.log(colors);
+// console.log(presetDarkPalettes);
+// import { ConfigProvider } from 'ant-design-vue';
+// ConfigProvider.config({
+//   prefixCls: 'custom',
+//   theme: {
+//     primaryColor: '#25b864',
+//   },
+// });
 /*
 * Local plugins
 * */

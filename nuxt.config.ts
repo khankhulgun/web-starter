@@ -16,20 +16,37 @@ export default defineNuxtConfig({
 
   css: [
     '@/assets/styles/tailwind.css',
+    '~/assets/styles/ant_light.less',
+    '~/assets/styles/ant_dark.less',
     '~/assets/styles/plugins.scss',
     "~/assets/styles/app.scss",
   ],
 
   buildModules: [
     // '@vueuse/nuxt'
-  ],
 
+  ],
+  // modules: ['@nuxtjs/color-mode'],
+  vite:{
+    css: {
+
+      preprocessorOptions: {
+
+        less: {
+
+          javascriptEnabled: true,
+        }
+      },
+    },
+  },
   build: {
     postcss: {
       postcssOptions: require("./postcss.config.js"),
     },
   },
 
+  "charset": "utf-8",
+  "viewport": "width=device-width, initial-scale=1",
   meta: {
     meta: [
       { "http-equiv": "X-UA-Compatible", content: "IE=edge" },
@@ -43,11 +60,11 @@ export default defineNuxtConfig({
     ],
     link: [
       { rel: "icon", href: "https://khankhulgun.mn/logo_b.png" },
-      {
-        rel: "stylesheet",
-        id: "theme-link",
-        href: "/themes/box-office/theme.css",
-      },
+      // {
+      //   rel: "stylesheet",
+      //   id: "theme-link",
+      //   href: "/themes/theme.css",
+      // },
     ],
   },
   generate: {

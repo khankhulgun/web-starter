@@ -1,6 +1,6 @@
 <!-- This example requires Tailwind CSS v2.0+ -->
 <template>
-  <section id="faq" aria-labelledby="faq-title" class="relative overflow-hidden bg-slate-50 py-20 sm:py-32 bg-white dark:bg-slate-800">
+  <section id="faq" aria-labelledby="faq-title" class="relative overflow-hidden bg-slate-50 py-20 sm:py-32 bg-white dark:bg-slate-900">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative">
       <div class="mx-auto max-w-2xl lg:mx-0"><h2 id="faq-title"
                                                  class="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl dark:text-slate-300"
