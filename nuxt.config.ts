@@ -62,8 +62,8 @@ export default defineNuxtConfig({
       { rel: "icon", href: "https://khankhulgun.mn/logo_b.png" },
       // {
       //   rel: "stylesheet",
-      //   id: "theme-link",
-      //   href: "/themes/theme.css",
+      //   // id: "theme-light",
+      //   href: "https://js.arcgis.com/4.24/esri/themes/light/main.css",
       // },
     ],
   },

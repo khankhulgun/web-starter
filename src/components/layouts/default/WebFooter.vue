@@ -21,8 +21,6 @@
               Ant example
             </nuxt-link>
 
-
-
           </div>
         </nav>
       </div>

@@ -27,6 +27,7 @@
     "@ant-design/colors": "^6.0.0",
     "@ant-design/icons-vue": "^6.1.0",
     "@apollo/client": "^3.6.6",
+    "@esri/calcite-colors": "^6.0.1",
     "@headlessui/vue": "^1.6.7",
     "@heroicons/vue": "^1.0.6",
     "@nuxt/postcss8": "^1.1.3",
