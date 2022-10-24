@@ -29,11 +29,8 @@ export default defineNuxtConfig({
   // modules: ['@nuxtjs/color-mode'],
   vite:{
     css: {
-
       preprocessorOptions: {
-
         less: {
-
           javascriptEnabled: true,
         }
       },
