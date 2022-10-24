@@ -31,8 +31,18 @@ export default defineNuxtConfig({
     css: {
       preprocessorOptions: {
         less: {
+          modifyVars: {
+            'primary-color': process.env.LAMBDA_PRIMARY_COLOR,
+            'primary-color-dark-theme': process.env.LAMBDA_PRIMARY_COLOR },
           javascriptEnabled: true,
-        }
+        },
+        scss: {
+          modifyVars: { 'primary-color': process.env.LAMBDA_PRIMARY_COLOR, 'primary-color-dark-theme': process.env.LAMBDA_PRIMARY_COLOR },
+          additionalData: `
+          $primary-color: ${process.env.LAMBDA_PRIMARY_COLOR};
+          $ag-primary-color: ${process.env.LAMBDA_PRIMARY_COLOR};
+          `,
+        },
       },
     },
   },
@@ -42,26 +52,20 @@ export default defineNuxtConfig({
     },
   },
 
-  "charset": "utf-8",
-  "viewport": "width=device-width, initial-scale=1",
   meta: {
     meta: [
       { "http-equiv": "X-UA-Compatible", content: "IE=edge" },
-      { name: "viewport", content: "width=device-width, initial-scale=1.0" },
-      { name: "description", content: "khankhulgun.mn нэгдсэн платформ." },
-      { name: "og:url", content: "https://khankhulgun.mn/" },
+      { name: "charset", content: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1, maximum-scale=1" },
+      { name: "description", content: process.env.LAMBDA_DESCRIPTION  },
+      { name: "og:url", content: process.env.LAMBDA_FAVICON },
       { name: "og:type", content: "article" },
-      { name: "og:title", content: "Khan Khulgun Team" },
-      { name: "og:description", content: "Khan Khulgun Team" },
-      { name: "og:image", content: "https://khankhulgun.mn/constellation.png" },
+      { name: "og:title", content: process.env.LAMBDA_TITLE },
+      { name: "og:description", content: process.env.LAMBDA_DESCRIPTION },
+      { name: "og:image", content: process.env.LAMBDA_FAVICON},
     ],
     link: [
-      { rel: "icon", href: "https://khankhulgun.mn/logo_b.png" },
-      // {
-      //   rel: "stylesheet",
-      //   // id: "theme-light",
-      //   href: "https://js.arcgis.com/4.24/esri/themes/light/main.css",
-      // },
+      { rel: "icon", href: process.env.LAMBDA_FAVICON },
     ],
   },
   generate: {
