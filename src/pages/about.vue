@@ -1,4 +1,7 @@
 <template>
+  <Head>
+    <Title>About</Title>
+  </Head>
   <div>
     <div class="container  m-auto">
       <h1 class="text-3xl font-bold ">
