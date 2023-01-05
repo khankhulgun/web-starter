@@ -1,5 +1,5 @@
 import { resolve } from "path";
-import { defineNuxtConfig } from "nuxt";
+import { defineNuxtConfig } from "nuxt/config";
 // import "src/assets/fonts/tt-commons";
 
 // @ts-ignore
@@ -22,10 +22,7 @@ export default defineNuxtConfig({
     "~/assets/styles/app.scss",
   ],
 
-  buildModules: [
-    // '@vueuse/nuxt'
 
-  ],
   // modules: ['@nuxtjs/color-mode'],
   vite:{
     css: {
