@@ -1,13 +1,13 @@
 import { App } from "vue";
 import {getNumber, getMoney} from '~/utils/number'
 import {getDate} from '~/utils/date'
-
+import {imageFilePath} from '~/utils/image'
+import {youTubeLinker} from '~/utils/youTubeLinker'
 /**
  * Initialize Global Filters
  * @param app vue instance
  */
 export function initFilters(app: App<Element>) {
-
   app.config.globalProperties.$number = (value)=>{
     return getNumber(value)
   }
@@ -16,5 +16,11 @@ export function initFilters(app: App<Element>) {
   }
   app.config.globalProperties.$currencyMNT = (value)=>{
     return getMoney(value)
+  }
+  app.config.globalProperties.$imageFilePath = (value)=>{
+    return imageFilePath(value)
+  }
+  app.config.globalProperties.$youTubeLinker = (value)=>{
+    return youTubeLinker(value)
   }
 }

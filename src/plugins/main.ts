@@ -20,6 +20,8 @@ import { defineNuxtPlugin } from "#app";
 import { initInlineSvg } from "./core/inline-svg";
 import { initFilters } from "./core/filters";
 import { initAxios } from "./core/axios";
+import axios from 'axios';
+import VueAxios from 'vue-axios'
 
 declare interface AppState {
   theme?: string;
@@ -31,6 +33,14 @@ export default defineNuxtPlugin(({ vueApp: app }) => {
   initAxios();
   initInlineSvg(app);
   initFilters(app);
+  app.config.globalProperties.$filters = {
+    imageFilePath(value) {
+      return imageFilePath(value)
+    },
+    youTubeLinker(value) {
+      return youTubeLinker(value)
+    },
+  }
 
   app.use(VueGtag, {
     property: {
@@ -43,8 +53,8 @@ export default defineNuxtPlugin(({ vueApp: app }) => {
   app.use(store);
   app.use(apolloProvider);
   app.use(VueAwesomeSwiper);
-
   app.use(Antd);
+  app.use(VueAxios, axios);
 
   return {
     provide: {

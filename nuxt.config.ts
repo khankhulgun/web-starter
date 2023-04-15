@@ -16,8 +16,8 @@ export default defineNuxtConfig({
 
   css: [
     '@/assets/styles/tailwind.css',
-    '~/assets/styles/ant_light.less',
-    '~/assets/styles/ant_dark.less',
+    // '~/assets/styles/ant_light.less',
+    // '~/assets/styles/ant_dark.less',
     '~/assets/styles/plugins.scss',
     "~/assets/styles/app.scss",
   ],
