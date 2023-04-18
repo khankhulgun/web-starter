@@ -3,6 +3,7 @@ import {getNumber, getMoney} from '~/utils/number'
 import {getDate} from '~/utils/date'
 import {imageFilePath} from '~/utils/image'
 import {youTubeLinker} from '~/utils/youTubeLinker'
+import {copyUrl} from '~/utils/copyUrl'
 /**
  * Initialize Global Filters
  * @param app vue instance
@@ -22,5 +23,8 @@ export function initFilters(app: App<Element>) {
   }
   app.config.globalProperties.$youTubeLinker = (value)=>{
     return youTubeLinker(value)
+  }
+  app.config.globalProperties.$copyUrl = ()=>{
+    return copyUrl()
   }
 }

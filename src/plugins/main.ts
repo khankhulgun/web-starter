@@ -40,6 +40,9 @@ export default defineNuxtPlugin(({ vueApp: app }) => {
     youTubeLinker(value) {
       return youTubeLinker(value)
     },
+    copyUrl() {
+      return copyUrl()
+    },
   }
 
   app.use(VueGtag, {

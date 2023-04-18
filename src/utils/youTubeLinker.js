@@ -1,3 +1,6 @@
+//youTube iin videog zaasan 11 iin urttai text iig salgaad doorxi embed link ugsraad butsaana
+// page deer youtube videog xaruulax uyd ashiglana
+//<iframe :src="$filters.youTubeLinker(item.video_link)">
 export function youTubeLinker(value) {
   let youtubevideo = '';
   let tvr = value != null ? value.split('?v=') : [];

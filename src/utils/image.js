@@ -1,3 +1,5 @@
+//zurag zaaj ugsun link deer vvssen esexiig shalgaad bxgvi bol default zurag xaruulax function
+//<img :src="$filters.imageFilePath(item.image_link)" />
 import { base_url } from '~/consts/const'
 export function imageFilePath(value) {
   // let IMAGE_URL = IMAGE_URL;
