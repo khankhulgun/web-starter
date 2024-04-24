@@ -74,11 +74,16 @@
     <ant-v4/>
 
   </div>
+  <a-space direction="vertical" align="center">
+    <a-qrcode :value="text" />
+    <a-input v-model:value="text" placeholder="-" :maxlength="60" />
+  </a-space>
 </template>
 
 <script>
 import { notification } from 'ant-design-vue';
 import { StarOutlined, LikeOutlined, MessageOutlined } from '@ant-design/icons-vue';
+
 import AntV4 from './ant-v4.vue';
 
 export default {
@@ -88,6 +93,7 @@ export default {
   },
   data(){
     return {
+      text: ref('https://www.antdv.com/'),
       visible:false,
       activeKey:"1",
       tabPosition:"left",
