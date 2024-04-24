@@ -71,7 +71,7 @@
       </a-list>
     </div>
 
-
+    <ant-v4/>
 
   </div>
 </template>
@@ -79,10 +79,12 @@
 <script>
 import { notification } from 'ant-design-vue';
 import { StarOutlined, LikeOutlined, MessageOutlined } from '@ant-design/icons-vue';
+import AntV4 from './ant-v4.vue';
+
 export default {
   name: 'ant',
   components:{
-    StarOutlined, LikeOutlined, MessageOutlined
+    StarOutlined, LikeOutlined, MessageOutlined, AntV4
   },
   data(){
     return {
